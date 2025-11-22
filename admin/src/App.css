@@ -1,0 +1,269 @@
+/* Root layout */
+
+#root {
+  min-height: 100vh;
+}
+
+.admin-app {
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Header */
+
+.admin-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.admin-subtitle {
+  font-size: 13px;
+  color: #64748b;
+  margin: 2px 0 0;
+}
+
+.admin-button-primary {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.admin-button-primary:hover {
+  background-color: #111827;
+}
+
+.admin-button-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Main layout */
+
+.admin-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px 16px 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .admin-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Panels */
+
+.admin-panel {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  padding: 16px;
+}
+
+.admin-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.admin-panel-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.admin-panel-description {
+  font-size: 12px;
+  color: #64748b;
+  margin: 0 0 14px;
+}
+
+/* Alerts */
+
+.admin-alert-error {
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  background-color: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+  padding: 8px 10px;
+  margin-bottom: 10px;
+}
+
+.admin-alert-success {
+  font-size: 12px;
+  color: #059669;
+  margin-top: 4px;
+}
+
+/* Queries table */
+
+.admin-table-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.admin-table thead {
+  background-color: #f8fafc;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 8px 10px;
+}
+
+.admin-table th {
+  text-align: left;
+  font-weight: 500;
+  color: #64748b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.admin-table-row-selected {
+  background-color: #f8fafc;
+}
+
+.admin-query-name {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.admin-query-email {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.admin-query-subject {
+  color: #0f172a;
+}
+
+.admin-query-message-preview {
+  font-size: 11px;
+  color: #94a3b8;
+  max-height: 2.6em;
+  overflow: hidden;
+}
+
+.admin-query-date {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+.admin-button-secondary {
+  padding: 4px 8px;
+  font-size: 11px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+  color: #334155;
+  cursor: pointer;
+}
+
+.admin-button-secondary:hover {
+  background-color: #f8fafc;
+}
+
+.admin-table-empty {
+  text-align: center;
+  padding: 14px 10px;
+  color: #94a3b8;
+}
+
+/* Form */
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-field-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #475569;
+  margin-bottom: 3px;
+}
+
+.admin-input,
+.admin-textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  padding: 7px 10px;
+  font-size: 13px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.admin-input:focus,
+.admin-textarea:focus {
+  outline: 2px solid #0f172a;
+  outline-offset: 1px;
+  border-color: #0f172a;
+}
+
+.admin-textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.admin-send-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: none;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.admin-send-button:hover {
+  background-color: #111827;
+}
+
+.admin-send-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
